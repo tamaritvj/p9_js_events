@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p9_js_events</title>
+    <!-- WORK SANS i SYNE TACTILE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+        
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex: column;
+        background-color: green;
+    }
+    #un{
+    background-color: black;
+    width: 50%;
+    height: 100%;
+    color: white;
+    
+    }
+    #dos{
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: black;
+    }
+    p{
+        display: flex;
+        font-family: 'Syne Tactile', sans-serif;
+        font-size: 5em;
+        /*CENTRAR EL TEXT*/
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        /* font-family: 'Work Sans', sans-serif; */
+        
+        }
+    @media (max-width: 1024px){
+    .container{
+    flex-direction: column;
+    }
+    #un,#dos{
+    width: 100%;
+    }
+    }
+    
+    </style>
+    <script>
+        $(document).ready(function(){
+            // $('#un').hover(function(){
+            //     $('#un p').toggle();
+            // });
+            // $('#dos').hover(function(){
+            //     $('#dos p').toggle();
+            // });
+
+        // $('#un p').on('click', function(){
+        //     $('p').css('font-size','10em');
+        // });
+
+        // $('#dos').on('mouseenter', function(){
+        //     $(this).css('width','100%');
+        //     $('#un').hide();
+        // });
+
+        // $('#un').on('mouseleave', function(){
+        //     $('.container div').css('background','black');
+        //     $('p').css('color', 'white');
+        // });
+
+        // $('#un').on('mouseleave', function(){
+        //     $(this).css('background','black');
+        //     $('#un p').css('color','white');
+        // });
+
+        // $('#un').on('mouseenter', function(){
+        //     $(this).css('background','white');
+        //     $('#un p').css('color','black');
+        // });
+        
+        /*MOLT INTERESSANT I GUAI*/
+        /*cambiar el text de un element html*/    
+        // $('#dos').on('mousedown', function(){
+        //     $(this).html('<p> sóc una p </p>');
+        //     $('#dos p').css('color','black');
+        // });
+
+        $('#un').on('mousedown', function(){
+            $('#un p').css('transform','rotate(180deg)');
+        });
+
+        $('#dos').on('mouseup', function(){
+            $('#dos p').css('transform','rotate(180deg)');
+        });
+        
+
+        
+
+               
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="un">
+        <p>hola</p>
+    </div>
+    <div id="dos">
+        <p>mòn</p>
+    </div>
+</div>
+</body>
+</html>
